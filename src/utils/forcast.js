@@ -7,7 +7,7 @@ const forcast = async(latitude, longitude, callback) => {
     try{
         const { data } = await axios.get(URL);
         console.log('Success', data)
-        callback(undefined, data?.current?.weather_descriptions+' It is currently ' + data.current.temperature + ' degrees out. There is a ' + data?.current?.precip + ' % chance of rain.');
+        callback(undefined, data?.current?.weather_descriptions+' It is currently ' + data.current.temperature + ' degrees out. This high today is ' + data.daily[0].temperatureHigh +' with a low of ' +data.daily[0].temperatureLow + '. There is a ' + data?.current?.precip + ' % chance of rain.');
         return data;
     }catch(error){
         if(error?.response?.data){
