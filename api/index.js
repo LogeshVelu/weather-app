@@ -5,8 +5,8 @@ import path from 'path';
 import express from 'express';
 import hbs from 'hbs';
 import 'dotenv/config';
-import geocode from './utils/geocode.js';
-import forcast from './utils/forcast.js';
+import geocode from '../src/utils/geocode.js';
+import forcast from '../src/utils/forcast.js';
 import { fileURLToPath } from 'url';
 
 
@@ -119,4 +119,4 @@ app.use((req, res) => {
 //     console.log('Listen')
 // }) 
 
-module.exports = app;// for vercel
+export default app;// for vercel
