@@ -5,11 +5,11 @@ import path from 'path';
 import express from 'express';
 import hbs from 'hbs';
 import 'dotenv/config';
-import geocode from '../src/utils/geocode.js';
-import forcast from '../src/utils/forcast.js';
+import geocode from './utils/geocode.js';
+import forcast from './utils/forcast.js';
 import { fileURLToPath } from 'url';
 
-
+const port = process.env.PORT || 3000;
 // const geocode = require("./utils/geocode").default;
 // const forcast = require("./utils/forcast");
 
@@ -115,8 +115,8 @@ app.use((req, res) => {
 })
 
 //to run application in particular port
-// app.listen(3000, ()=> {
-//     console.log('Listen')
-// }) 
+app.listen(port, ()=> {
+    console.log('Server running on port '+ port)
+}) 
 
-export default app;// for vercel
+// export default app;// for vercel

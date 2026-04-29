@@ -1,18 +1,28 @@
 {
   "name": "web-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js -e js,hbs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "axios": "^1.15.2",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "hbs": "^4.2.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LogeshVelu/weather-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LogeshVelu/weather-app/issues"
+  },
+  "homepage": "https://github.com/LogeshVelu/weather-app#readme",
+  "description": ""
 }
