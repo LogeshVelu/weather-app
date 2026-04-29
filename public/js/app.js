@@ -1,13 +1,13 @@
 console.log('Client Javascript')
 
-fetch('http://localhost:3000/weather?address=bostan').then((res) => res.json()).then((data) => {
-    if(data.error){
-        console.log(data.error);
-    }else{
-        console.log(data.location)
-        console.log(data.forcast)
-    }
-}).catch((error) => console.log(error))
+// fetch('http://localhost:3000/weather?address=bostan').then((res) => res.json()).then((data) => {
+//     if(data.error){
+//         console.log(data.error);
+//     }else{
+//         console.log(data.location)
+//         console.log(data.forcast)
+//     }
+// }).catch((error) => console.log(error))
 
 const weatherForm = document.querySelector('form')
 const searchElement = document.querySelector('input')
@@ -22,7 +22,7 @@ weatherForm.addEventListener('submit', (event) =>{
     messageOne.textContent = 'Loading...'
     messageSecond.textContent = ''
     
-    fetch(`http://localhost:3000/weather?address=${location}`).then((res) => res.json()).then((data) => {
+    fetch(`/weather?address=${location}`).then((res) => res.json()).then((data) => {
         if(data.error){
             messageOne.textContent = data.error
         }else{
