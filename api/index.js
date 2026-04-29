@@ -115,8 +115,8 @@ app.use((req, res) => {
 })
 
 //to run application in particular port
-app.listen(3000, ()=> {
-    console.log('Listen')
-}) 
+// app.listen(3000, ()=> {
+//     console.log('Listen')
+// }) 
 
-// module.exports = app;// for vercel
+module.exports = app;// for vercel
