@@ -1,4 +1,3 @@
-console.log('Client Javascript')
 
 // fetch('http://localhost:3000/weather?address=bostan').then((res) => res.json()).then((data) => {
 //     if(data.error){
@@ -22,7 +21,7 @@ weatherForm.addEventListener('submit', (event) =>{
     messageOne.textContent = 'Loading...'
     messageSecond.textContent = ''
     
-    fetch(`/weather?address=${location}`).then((res) => res.json()).then((data) => {
+    fetch(`http://localhost:3000/weather?address=${location}`).then((res) => res.json()).then((data) => {
         if(data.error){
             messageOne.textContent = data.error
         }else{

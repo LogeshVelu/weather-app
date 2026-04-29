@@ -1,10 +1,11 @@
 import axios  from "axios";
 
 const geocode = async(address, callback) => {
+    
     const mapboxURl =`https://api.mapbox.com/search/geocode/v6/forward?q=${address}&access_token=${process.env.MAPBOX_TOKEN}`
     try{
         const res = await axios.get(mapboxURl);
-        // console.log('features:::', res.data.features[0])
+        // console.log('features:::', res.data.features)
         if(res.data.features.length === 0){
             callback('Unable to find location, Try another search!', undefined)
         }else{

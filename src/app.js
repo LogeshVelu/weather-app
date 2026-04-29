@@ -60,6 +60,7 @@ app.get('/about', (req, res) => {
 })
 
 app.get('/weather', (req, res) => {
+    console.log('req.query', req.query)
     if(!req.query.address){
         return res.send({
             error:'You must provide a search term'
